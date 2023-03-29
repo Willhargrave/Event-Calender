@@ -21,5 +21,9 @@ class PlanController < ApplicationController
     @plan = Plan.find(params[:id])
   end
 
-  
+  private
+
+  def plan_params
+    params.require(:plan).permit(:name, :date, :time, :description)
+  end
 end
