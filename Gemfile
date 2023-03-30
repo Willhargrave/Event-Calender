@@ -38,7 +38,7 @@ gem 'sqlite3', '~> 1.4'
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gemlandmark
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
@@ -60,6 +60,7 @@ group :development, :test do
   gem "dotenv-rails"
 
 end
+
 gem 'bootstrap', '~> 5.0.1'
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]

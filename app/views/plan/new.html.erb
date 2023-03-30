@@ -1,7 +1,6 @@
 <div class="container">
   <h1 class="text-center my-2">Add Event</h1>
-  <%= simple_form_for @plan do |f| %>
-    <%#= f.association :food, %>
+ <%= simple_form_for(@plan, url: new_plan_path) do |f| %>
     <%= f.input :name%>
     <%= f.input :time %>
     <%= f.input :date %>
