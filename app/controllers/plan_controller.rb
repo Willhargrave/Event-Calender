@@ -1,13 +1,24 @@
 class PlanController < ApplicationController
+  def new
+    @plan = Plan.new
+  end
+
   def create
     @plan = Plan.new(plan_params)
     if @plan.save
-      redirect_to :home
+      alert("saved")
     else
-      render :new
+      alert("didn't save")
     end
   end
-
+  # def create
+  #   @landmark = Landmark.new(landmark_params)
+  #   if @landmark.save
+  #     redirect_to landmark_path(@landmark)
+  #   else
+  #     render :new
+  #   end
+  # end
   def destroy
     @plan = Plan.find(params[:id])
     if @plan.destroy
@@ -21,9 +32,6 @@ class PlanController < ApplicationController
     @plan = Plan.find(params[:id])
   end
 
-  def new
-    @plan = Plan.new
-  end
 
   private
 

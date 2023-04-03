@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 
   def home
-   @plans = Plan.all
+    @plans = Plan.all
   end
 end
