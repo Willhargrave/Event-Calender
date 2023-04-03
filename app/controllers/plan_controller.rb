@@ -6,9 +6,11 @@ class PlanController < ApplicationController
   def create
     @plan = Plan.new(plan_params)
     if @plan.save
-      alert("saved")
+      flash[:notice] = "Plan created successfully"
+      render :new
     else
-      alert("didn't save")
+      flash[:alert] = "Plan couldn't be created"
+      render :new
     end
   end
   def destroy
