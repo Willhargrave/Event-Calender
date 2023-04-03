@@ -5,7 +5,6 @@ class PlansController < ApplicationController
 
   def create
     @plan = Plan.new(plan_params)
-    raise params.inspect
     if @plan.save
       flash[:notice] = "Plan created successfully"
       redirect_to @plan
