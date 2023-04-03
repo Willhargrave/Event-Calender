@@ -1,4 +1,4 @@
-class PlanController < ApplicationController
+class PlansController < ApplicationController
   def new
     @plan = Plan.new
   end
