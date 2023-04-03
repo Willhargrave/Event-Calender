@@ -7,7 +7,7 @@ class PlansController < ApplicationController
     @plan = Plan.new(plan_params)
     if @plan.save
       flash[:notice] = "Plan created successfully"
-      redirect_to @plan
+      redirect_to root_path
     else
       flash[:alert] = "Plan couldn't be created"
       render :new
