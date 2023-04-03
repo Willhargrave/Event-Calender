@@ -5,9 +5,10 @@ class PlanController < ApplicationController
 
   def create
     @plan = Plan.new(plan_params)
+    raise params.inspect
     if @plan.save
       flash[:notice] = "Plan created successfully"
-      render :new
+      redirect_to @plan
     else
       flash[:alert] = "Plan couldn't be created"
       render :new
