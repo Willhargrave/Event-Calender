@@ -11,14 +11,6 @@ class PlanController < ApplicationController
       alert("didn't save")
     end
   end
-  # def create
-  #   @landmark = Landmark.new(landmark_params)
-  #   if @landmark.save
-  #     redirect_to landmark_path(@landmark)
-  #   else
-  #     render :new
-  #   end
-  # end
   def destroy
     @plan = Plan.find(params[:id])
     if @plan.destroy
