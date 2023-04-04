@@ -12,8 +12,8 @@ class PlansController < ApplicationController
 
     else
       flash[:alert] = "Plan couldn't be created"
-      puts "Plan couldn't be saved"
-      render :new
+      puts @plan.errors.full_messages
+      render :new, status: :unprocessable_entity
     end
   end
   def destroy
