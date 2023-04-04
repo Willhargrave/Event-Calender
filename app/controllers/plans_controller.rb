@@ -1,10 +1,11 @@
 class PlansController < ApplicationController
+  belongs_to :user
   def new
     @plan = Plan.new
   end
 
   def create
-    @plan = Plan.new(plan_params)
+    @plan = current_user.plans.new(plan_params)
     if @plan.save
       flash[:notice] = "Plan created successfully"
       puts "plan saved"
@@ -14,6 +15,7 @@ class PlansController < ApplicationController
       flash[:alert] = "Plan couldn't be created"
       puts @plan.errors.full_messages
       render :new, status: :unprocessable_entity
+      raise
     end
   end
   def destroy
