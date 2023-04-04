@@ -7,9 +7,12 @@ class PlansController < ApplicationController
     @plan = Plan.new(plan_params)
     if @plan.save
       flash[:notice] = "Plan created successfully"
+      puts "plan saved"
       redirect_to root_path
+
     else
       flash[:alert] = "Plan couldn't be created"
+      puts "Plan couldn't be saved"
       render :new
     end
   end
