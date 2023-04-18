@@ -18,6 +18,7 @@ class PlansController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+  
   def destroy
     @plan = Plan.find(params[:id])
     if @plan.destroy
