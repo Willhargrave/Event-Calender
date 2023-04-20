@@ -31,7 +31,7 @@ gem 'sqlite3', '~> 1.4'
 #gem 'bourbon', '~> 4.2', '>= 4.2.6'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
-
+gem 'pundit', '~> 1.1'
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
